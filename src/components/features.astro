@@ -1,0 +1,93 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+    {
+    title: "Ремонт квартир под ключ",
+    description:
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+    icon: "bx:wrench",
+  },
+  {
+    title: "Отделочные работы",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    icon: "bx:check-square",
+  },
+  {
+    title: "Ремонт и отделка балконов и лоджий",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    icon: "bx:wrench",
+  },
+  {
+    title: "Ремонт коммерческих помещений",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    icon: "bx:brush",
+  },
+  {
+    title: "Благоустройство помещений",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    icon: "bx:world",
+  },
+  {
+    title: "Остекление помещений",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    icon: "bx:street-view",
+  },
+  {
+    title: "Консультации по ипотечным вопросам",
+    description:
+      "Поможем вам подать заявку на ипотеку во все банки-партнёры и получить подходящие предложения.",
+    icon: "bx:timer",
+  },
+  {
+    title: "Провести сделку",
+    description:
+      "Простой и безопасный способ покупки жилья на вторичном рынке без ипотеки. Полное сопровождение сделки от составления договора до получения ключей.",
+    icon: "bx:subdirectory-right",
+  },
+  {
+    title: "Защитить сделку",
+    description:
+      "Гарантируем безопасную покупку вторичной недвижимости.",
+    icon: "bx:lock-alt",
+  },
+  {
+    title: "Выбрать новостройку",
+    description:
+      "Поможем вам подобрать варианты новостроек по желаемым признакам.",
+    icon: "bx:search",
+  },
+
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Наша сфера услуг
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Наша сфера услуг.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

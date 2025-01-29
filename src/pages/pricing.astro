@@ -1,0 +1,74 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "",
+    price: "Ремонт",
+    popular: true,
+    features: [
+      "Взаимодействие",
+      "Полное сопровождение",
+      "Спорные вопросы",
+      "Документы по услугам",
+      "Поддержка по телефону 24/7",
+    ],
+    button: {
+      text: "Оставить заявку",
+      link: "/",
+    },
+  },
+  {
+    name: "",
+    price: "Провести сделку",
+    popular: true,
+    features: [
+      "Взаимодействие",
+      "Полное сопровождение",
+      "Спорные вопросы",
+      "Документы по услугам",
+      "Поддержка по телефону 24/7",
+      
+    ],
+    button: {
+      text: "Get Started",
+      link: "#",
+    },
+  },
+
+   {
+    name: "",
+    price: "Консультации",
+    popular: false,
+    features: [
+      "Взаимодействие",
+      "Полное сопровождение",
+      "Спорные вопросы",
+      "Документы по услугам",
+      "Поддержка по телефону 24/7",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Ценообразование</Fragment>
+      <Fragment slot="desc">
+        Мы ценим ваше & своё время. Никаких сюрпризов.<wbr/> Оставьте размышления нам - оставьте заявку нашему менеджеру
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>
