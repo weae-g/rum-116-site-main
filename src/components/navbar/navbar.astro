@@ -10,9 +10,8 @@ const menuitems = [
     path: "#",
     children: [
       { title: "Частным лицам", path: "/" },
-      { title: "Риелторам и агентствам", path: "#" , badge: true,},
-      { title: "Партнёрам", path: "#" },
-      { title: "404 Page", path: "/404", },
+      { title: "Риелторам и агентствам", path: "/soon" , badge: true,},
+      { title: "Партнёрам", path: "/soon" },
     ],
   },
   {
@@ -34,7 +33,7 @@ const menuitems = [
   {
     title: "Защита сделки",
     badge: true,
-    path: "/secure",
+    path: "/soon",
   },
 ];
 ---
@@ -85,14 +84,14 @@ const menuitems = [
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
 
-          <Link href="#" size="md" block>Оставить заявку</Link>
+          <Link href="contact" size="md" block>Оставить заявку</Link>
         </div>
       </MenuItems>
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
 
-        <Link href="#" size="md">Оставить заявку</Link>
+        <Link href="contact" size="md">Оставить заявку</Link>
       </div>
     </div>
   </header>
