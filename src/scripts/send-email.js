@@ -24,7 +24,6 @@ const CHAT_ID = process.env.CHAT_ID;
 
 app.post("/send-email", async (req, res) => {
   const { name, phone, message } = req.body;
-  console.log(req.body);
 
   try {
     bot.sendMessage(
